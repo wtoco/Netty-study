@@ -35,6 +35,7 @@ public class NettyServer {
                 System.out.println("服务端启动成功...");
                 // 监听服务器关闭监听
                 f.channel().closeFuture().sync();
+                System.out.println("服务端监听关闭...");
             } finally {
                 group.shutdownGracefully(); ////关闭EventLoopGroup，释放掉所有资源包括创建的线程  
             }

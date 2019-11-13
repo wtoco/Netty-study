@@ -7,6 +7,8 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
 import java.io.IOException;
+import java.util.Scanner;
+
 /**
  * 
 * Title: NettyClient
@@ -36,13 +38,16 @@ public class NettyClient {
             b.handler(new NettyClientFilter());
             // 连接服务端
             ch = b.connect(host, port).sync().channel();
-            star();
+            for (;;){
+                star();
+            }
     }
 
     public static void star() throws IOException{
-        String str="Hello Netty";
-        ch.writeAndFlush(str+ "\r\n");
-        System.out.println("客户端发送数据:"+str);
+        Scanner in = new Scanner(System.in);
+        String ins = in.nextLine();
+        ch.writeAndFlush(ins+ "\r\n");
+        System.out.println("客户端发送数据:"+ins);
    }
 
 }
