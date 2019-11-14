@@ -17,7 +17,7 @@ import io.netty.handler.timeout.IdleStateEvent;
 * @Description: 客户端业务逻辑实现
 * @Version:1.0.0  
 * @author pancm
-* @date 2017年10月8日
+ * @date 2019-10-14
  */
 public class NettyClientHandler extends  ChannelInboundHandlerAdapter {
  

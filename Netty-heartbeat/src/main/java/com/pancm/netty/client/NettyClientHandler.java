@@ -16,7 +16,7 @@ import java.util.Date;
 * Description: 客户端业务逻辑实现
 * Version:1.0.0  
 * @author pancm
-* @date 2017年10月8日
+ * @date 2019-10-14
  */
 public class NettyClientHandler extends  ChannelInboundHandlerAdapter {
     /** 客户端请求的心跳命令  */
@@ -62,8 +62,8 @@ public class NettyClientHandler extends  ChannelInboundHandlerAdapter {
             if (IdleState.WRITER_IDLE.equals(event.state())) {  //如果写通道处于空闲状态,就发送心跳命令
                 if(idle_count <= 3){   //设置发送次数
                     idle_count++;  
-                    ctx.channel().writeAndFlush(HEARTBEAT_SEQUENCE.duplicate());  
-                }else{  
+                    ctx.channel().writeAndFlush(HEARTBEAT_SEQUENCE.duplicate());
+                }else{
                     System.out.println("不再发送心跳请求了！");
                 }
                 fcount++;

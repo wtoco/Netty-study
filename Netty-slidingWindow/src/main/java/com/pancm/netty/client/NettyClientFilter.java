@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 * @Description: Netty客户端 过滤器
 * @Version:1.0.0  
 * @author pancm
-* @date 2017年10月8日
+ * @date 2019-10-14
  */
 public class NettyClientFilter extends ChannelInitializer<SocketChannel> {
 

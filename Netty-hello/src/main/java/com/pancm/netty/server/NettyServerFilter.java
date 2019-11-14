@@ -14,8 +14,8 @@ import io.netty.handler.codec.string.StringEncoder;
  * Description: 
  * Netty 服务端过滤器
  * Version:1.0.0  
- * @author pancm
- * @date 2017-8-31
+ * @author wtoco
+  * @date 2019-10-14
   */
 public class NettyServerFilter extends ChannelInitializer<SocketChannel> {
 

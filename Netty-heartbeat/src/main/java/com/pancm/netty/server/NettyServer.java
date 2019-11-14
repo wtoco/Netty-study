@@ -13,7 +13,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 * 心跳测试
 * Version:1.0.0  
 * @author pancm
-* @date 2017年10月8日
+ * @date 2019-10-14
  */
 public class NettyServer {
         private static final int port = 9876; //设置服务端端口

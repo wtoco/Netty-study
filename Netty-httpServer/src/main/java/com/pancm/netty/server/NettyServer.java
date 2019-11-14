@@ -14,7 +14,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 * Description: Netty服务端  Http测试
 * Version:1.0.0  
 * @author pancm
-* @date 2017年10月26日
+ * @date 2019-10-14
  */
 public class NettyServer {
 	    private static final int port = 6789; //设置服务端端口

@@ -15,8 +15,8 @@ import java.util.concurrent.TimeUnit;
  * @Title: HelloServerInitializer
  * @Description: Netty 服务端过滤器
  * @Version:1.0.0  
- * @author pancm
- * @date 2017年10月8日
+ * @author wtoco
+  * @date 2019-10-14
   */
 public class NettyServerFilter extends ChannelInitializer<SocketChannel> {
 

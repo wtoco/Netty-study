@@ -12,6 +12,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.string.StringDecoder;
+import io.netty.handler.codec.string.StringEncoder;
 
 import java.io.IOException;
 
@@ -21,7 +22,7 @@ import java.io.IOException;
 * Description: Netty客户端  用于测试粘包、拆包
 * Version:1.0.0  
 * @author pancm
-* @date 2017年9月20日
+ * @date 2019-10-14
  */
 public class NettyClient {
 	  public static String host = "127.0.0.1";  //ip地址
@@ -42,7 +43,8 @@ public class NettyClient {
 	             .handler(new ChannelInitializer<SocketChannel>() {  
 	                 @Override  
 	                 public void initChannel(SocketChannel ch) throws Exception {  
-	                     ChannelPipeline p = ch.pipeline();  
+	                     ChannelPipeline p = ch.pipeline();
+						 p.addLast(new StringEncoder());
 	                     p.addLast(new StringDecoder());    //绑定解码器
 	                     p.addLast(new NettyClientHandler());   //绑定自定义业务 
 	                 }  

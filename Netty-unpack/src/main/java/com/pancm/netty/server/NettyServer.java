@@ -20,7 +20,7 @@ import java.net.InetSocketAddress;
 * Description:  Netty服务端   用于测试粘包、拆包
 * Version:1.0.0  
 * @author pancm
-* @date 2017年9月20日
+ * @date 2019-10-14
  */
 public class NettyServer {
 	private  final static int port=2345;  

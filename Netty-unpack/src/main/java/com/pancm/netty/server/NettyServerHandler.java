@@ -9,7 +9,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 * Description: Netty服务端业务逻辑处理  用于测试粘包、拆包
 * Version:1.0.0  
 * @author pancm
-* @date 2017年9月20日
+ * @date 2019-10-14
  */
 public class NettyServerHandler extends ChannelInboundHandlerAdapter{  
     
